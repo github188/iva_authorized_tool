@@ -12,7 +12,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{1641CB0E-C50E-4FBE-9B18-C2B798211790}</ProjectGuid>
-    <RootNamespace>JayaSoftKeygen</RootNamespace>
+    <RootNamespace>SoftKeygen</RootNamespace>
     <Keyword>MFCProj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,8 +110,8 @@
     <ClInclude Include="Base64.h" />
     <ClInclude Include="Connect.h" />
     <ClInclude Include="ivr_rsa.h" />
-    <ClInclude Include="JayaSoftKeygen.h" />
-    <ClInclude Include="JayaSoftKeygenDlg.h" />
+    <ClInclude Include="SoftKeygen.h" />
+    <ClInclude Include="SoftKeygenDlg.h" />
     <ClInclude Include="md5.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
@@ -121,8 +121,8 @@
     <ClCompile Include="Base64.cpp" />
     <ClCompile Include="Connect.cpp" />
     <ClCompile Include="ivr_rsa.cpp" />
-    <ClCompile Include="JayaSoftKeygen.cpp" />
-    <ClCompile Include="JayaSoftKeygenDlg.cpp" />
+    <ClCompile Include="SoftKeygen.cpp" />
+    <ClCompile Include="SoftKeygenDlg.cpp" />
     <ClCompile Include="md5.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -130,20 +130,20 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="JayaSoftKeygen.rc" />
+    <ResourceCompile Include="SoftKeygen.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\JayaSoftKeygen.rc2" />
+    <None Include="res\SoftKeygen.rc2" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\JayaSoftKeygen.ico" />
+    <Image Include="res\SoftKeygen.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties RESOURCE_FILE="JayaSoftKeygen.rc" />
+      <UserProperties RESOURCE_FILE="SoftKeygen.rc" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

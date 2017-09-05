@@ -1,10 +1,10 @@
 
-// JayaSoftKeygenDlg.cpp : 实现文件
+// SoftKeygenDlg.cpp : 实现文件
 //
 
 #include "stdafx.h"
-#include "JayaSoftKeygen.h"
-#include "JayaSoftKeygenDlg.h"
+#include "SoftKeygen.h"
+#include "SoftKeygenDlg.h"
 #include "afxdialogex.h"
 #include "Connect.h"
 #include "ivr_rsa.h"
@@ -101,12 +101,12 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 
-// CJayaSoftKeygenDlg 对话框
+// CSoftKeygenDlg 对话框
 
 
 
-CJayaSoftKeygenDlg::CJayaSoftKeygenDlg(CWnd* pParent /*=NULL*/)
-	: CDialogEx(CJayaSoftKeygenDlg::IDD, pParent)
+CSoftKeygenDlg::CSoftKeygenDlg(CWnd* pParent /*=NULL*/)
+	: CDialogEx(CSoftKeygenDlg::IDD, pParent)
 	, m_strLicense(_T(""))
 	, m_tTimeOut(0)
 	, m_szMacAddr(_T(""))
@@ -118,7 +118,7 @@ CJayaSoftKeygenDlg::CJayaSoftKeygenDlg(CWnd* pParent /*=NULL*/)
 	m_szAuth = "";
 }
 
-void CJayaSoftKeygenDlg::DoDataExchange(CDataExchange* pDX)
+void CSoftKeygenDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_IPADDRESS1, m_tDevIp);
@@ -129,24 +129,24 @@ void CJayaSoftKeygenDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Text(pDX, IDC_EDIT_PASS, m_strPass);
 }
 
-BEGIN_MESSAGE_MAP(CJayaSoftKeygenDlg, CDialogEx)
+BEGIN_MESSAGE_MAP(CSoftKeygenDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
-	ON_BN_CLICKED(IDOK, &CJayaSoftKeygenDlg::OnBnClickedOk)
-	ON_BN_CLICKED(IDC_RADIO2, &CJayaSoftKeygenDlg::OnBnClickedRadio2)
-	ON_BN_CLICKED(IDC_RADIO1, &CJayaSoftKeygenDlg::OnBnClickedRadio1)
-	ON_BN_CLICKED(IDC_BUTTON1, &CJayaSoftKeygenDlg::OnBnClickedButton1)
-	ON_BN_CLICKED(IDC_BUTTON3, &CJayaSoftKeygenDlg::OnBnClickedButton3)
-	ON_BN_CLICKED(IDC_BUTTON2, &CJayaSoftKeygenDlg::OnBnClickedButton2)
-	ON_BN_CLICKED(IDC_BUTTON4, &CJayaSoftKeygenDlg::OnBnClickedButton4)
-	ON_BN_CLICKED(IDC_BUTTON5, &CJayaSoftKeygenDlg::OnBnClickedButton5)
+	ON_BN_CLICKED(IDOK, &CSoftKeygenDlg::OnBnClickedOk)
+	ON_BN_CLICKED(IDC_RADIO2, &CSoftKeygenDlg::OnBnClickedRadio2)
+	ON_BN_CLICKED(IDC_RADIO1, &CSoftKeygenDlg::OnBnClickedRadio1)
+	ON_BN_CLICKED(IDC_BUTTON1, &CSoftKeygenDlg::OnBnClickedButton1)
+	ON_BN_CLICKED(IDC_BUTTON3, &CSoftKeygenDlg::OnBnClickedButton3)
+	ON_BN_CLICKED(IDC_BUTTON2, &CSoftKeygenDlg::OnBnClickedButton2)
+	ON_BN_CLICKED(IDC_BUTTON4, &CSoftKeygenDlg::OnBnClickedButton4)
+	ON_BN_CLICKED(IDC_BUTTON5, &CSoftKeygenDlg::OnBnClickedButton5)
 END_MESSAGE_MAP()
 
 
-// CJayaSoftKeygenDlg 消息处理程序
+// CSoftKeygenDlg 消息处理程序
 
-BOOL CJayaSoftKeygenDlg::OnInitDialog()
+BOOL CSoftKeygenDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 
@@ -201,7 +201,7 @@ BOOL CJayaSoftKeygenDlg::OnInitDialog()
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 
-void CJayaSoftKeygenDlg::OnSysCommand(UINT nID, LPARAM lParam)
+void CSoftKeygenDlg::OnSysCommand(UINT nID, LPARAM lParam)
 {
 	if ((nID & 0xFFF0) == IDM_ABOUTBOX)
 	{
@@ -218,7 +218,7 @@ void CJayaSoftKeygenDlg::OnSysCommand(UINT nID, LPARAM lParam)
 //  来绘制该图标。对于使用文档/视图模型的 MFC 应用程序，
 //  这将由框架自动完成。
 
-void CJayaSoftKeygenDlg::OnPaint()
+void CSoftKeygenDlg::OnPaint()
 {
 	if (IsIconic())
 	{
@@ -245,7 +245,7 @@ void CJayaSoftKeygenDlg::OnPaint()
 
 //当用户拖动最小化窗口时系统调用此函数取得光标
 //显示。
-HCURSOR CJayaSoftKeygenDlg::OnQueryDragIcon()
+HCURSOR CSoftKeygenDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
 }
@@ -268,7 +268,7 @@ int CHAR2HEXNUM(char c)
 	return ic;
 }
 
-void CJayaSoftKeygenDlg::OnBnClickedOk()
+void CSoftKeygenDlg::OnBnClickedOk()
 {
 	UpdateData(TRUE);
 	UpdateAuthorization();
@@ -367,19 +367,19 @@ void CJayaSoftKeygenDlg::OnBnClickedOk()
 }
 
 
-void CJayaSoftKeygenDlg::OnBnClickedRadio2()
+void CSoftKeygenDlg::OnBnClickedRadio2()
 {
 	// TODO: 在此添加控件通知处理程序代码
 	GetDlgItem(IDC_DATETIMEPICKER1)->EnableWindow(TRUE);
 }
 
-void CJayaSoftKeygenDlg::OnBnClickedRadio1()
+void CSoftKeygenDlg::OnBnClickedRadio1()
 {
 	// TODO: 在此添加控件通知处理程序代码
 	GetDlgItem(IDC_DATETIMEPICKER1)->EnableWindow(FALSE);
 }
 
-void CJayaSoftKeygenDlg::OnBnClickedButton1()
+void CSoftKeygenDlg::OnBnClickedButton1()
 {
 	// TODO:设置授权
 	UpdateData(TRUE);
@@ -404,7 +404,7 @@ void CJayaSoftKeygenDlg::OnBnClickedButton1()
 }
 
 
-void CJayaSoftKeygenDlg::OnBnClickedButton3()
+void CSoftKeygenDlg::OnBnClickedButton3()
 {
 	// TODO: 保存LICENSE文件
 	if (m_strLicense.IsEmpty())
@@ -444,7 +444,7 @@ void CJayaSoftKeygenDlg::OnBnClickedButton3()
 	}
 }
 
-void CJayaSoftKeygenDlg::OnBnClickedButton2()
+void CSoftKeygenDlg::OnBnClickedButton2()
 {
 	// TODO:获取授权
 	UpdateData(TRUE);
@@ -502,7 +502,7 @@ void CJayaSoftKeygenDlg::OnBnClickedButton2()
 	CheckDlgItem();
 }
 
-void CJayaSoftKeygenDlg::OnBnClickedButton4()
+void CSoftKeygenDlg::OnBnClickedButton4()
 {
 	// TODO:删除授权
 	UpdateData(TRUE);
@@ -516,14 +516,14 @@ void CJayaSoftKeygenDlg::OnBnClickedButton4()
 }
 
 
-void CJayaSoftKeygenDlg::OnBnClickedButton5()
+void CSoftKeygenDlg::OnBnClickedButton5()
 {
 	// TODO: 在此添加控件通知处理程序代码
 	m_bOnLine = !m_bOnLine;
 	CheckDlgItem();
 }
 
-void CJayaSoftKeygenDlg::CheckDlgItem()
+void CSoftKeygenDlg::CheckDlgItem()
 {
 	GetDlgItem(IDC_BUTTON5)->SetWindowText(m_bOnLine?"切换到离线模式":"切换到在线模式");
 	GetDlgItem(IDC_STATIC_PRE)->SetWindowText(m_bOnLine?"IP:":"MAC:");
@@ -534,7 +534,7 @@ void CJayaSoftKeygenDlg::CheckDlgItem()
 	GetDlgItem(IDC_IPADDRESS1)->ShowWindow(m_bOnLine?SW_SHOW:SW_HIDE);
 }
 
-void CJayaSoftKeygenDlg::UpdateAuthorization()
+void CSoftKeygenDlg::UpdateAuthorization()
 {
 	if (m_strPass.IsEmpty() || m_strUser.IsEmpty())
 	{

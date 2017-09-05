@@ -1,5 +1,5 @@
 
-// JayaSoftKeygen.h : PROJECT_NAME 应用程序的主头文件
+// SoftKeygen.h : PROJECT_NAME 应用程序的主头文件
 //
 
 #pragma once
@@ -11,14 +11,14 @@
 #include "resource.h"		// 主符号
 
 
-// CJayaSoftKeygenApp:
-// 有关此类的实现，请参阅 JayaSoftKeygen.cpp
+// CSoftKeygenApp:
+// 有关此类的实现，请参阅 SoftKeygen.cpp
 //
 
-class CJayaSoftKeygenApp : public CWinApp
+class CSoftKeygenApp : public CWinApp
 {
 public:
-	CJayaSoftKeygenApp();
+	CSoftKeygenApp();
 
 // 重写
 public:
@@ -29,4 +29,4 @@ public:
 	DECLARE_MESSAGE_MAP()
 };
 
-extern CJayaSoftKeygenApp theApp;
+extern CSoftKeygenApp theApp;

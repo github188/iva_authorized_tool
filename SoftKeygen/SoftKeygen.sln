@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JayaSoftKeygen", "JayaSoftKeygen\JayaSoftKeygen.vcxproj", "{1641CB0E-C50E-4FBE-9B18-C2B798211790}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SoftKeygen", "SoftKeygen\SoftKeygen.vcxproj", "{1641CB0E-C50E-4FBE-9B18-C2B798211790}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

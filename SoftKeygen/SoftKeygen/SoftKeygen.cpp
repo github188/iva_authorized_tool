@@ -1,26 +1,26 @@
 
-// JayaSoftKeygen.cpp : 定义应用程序的类行为。
+// SoftKeygen.cpp : 定义应用程序的类行为。
 //
 
 #include "stdafx.h"
-#include "JayaSoftKeygen.h"
-#include "JayaSoftKeygenDlg.h"
+#include "SoftKeygen.h"
+#include "SoftKeygenDlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
 
-// CJayaSoftKeygenApp
+// CSoftKeygenApp
 
-BEGIN_MESSAGE_MAP(CJayaSoftKeygenApp, CWinApp)
+BEGIN_MESSAGE_MAP(CSoftKeygenApp, CWinApp)
 	ON_COMMAND(ID_HELP, &CWinApp::OnHelp)
 END_MESSAGE_MAP()
 
 
-// CJayaSoftKeygenApp 构造
+// CSoftKeygenApp 构造
 
-CJayaSoftKeygenApp::CJayaSoftKeygenApp()
+CSoftKeygenApp::CSoftKeygenApp()
 {
 	// 支持重新启动管理器
 	m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_RESTART;
@@ -30,14 +30,14 @@ CJayaSoftKeygenApp::CJayaSoftKeygenApp()
 }
 
 
-// 唯一的一个 CJayaSoftKeygenApp 对象
+// 唯一的一个 CSoftKeygenApp 对象
 
-CJayaSoftKeygenApp theApp;
+CSoftKeygenApp theApp;
 
 
-// CJayaSoftKeygenApp 初始化
+// CSoftKeygenApp 初始化
 
-BOOL CJayaSoftKeygenApp::InitInstance()
+BOOL CSoftKeygenApp::InitInstance()
 {
 	// 如果一个运行在 Windows XP 上的应用程序清单指定要
 	// 使用 ComCtl32.dll 版本 6 或更高版本来启用可视化方式，
@@ -70,7 +70,7 @@ BOOL CJayaSoftKeygenApp::InitInstance()
 	// 例如修改为公司或组织名
 	SetRegistryKey(_T("应用程序向导生成的本地应用程序"));
 
-	CJayaSoftKeygenDlg dlg;
+	CSoftKeygenDlg dlg;
 	m_pMainWnd = &dlg;
 	INT_PTR nResponse = dlg.DoModal();
 	if (nResponse == IDOK)

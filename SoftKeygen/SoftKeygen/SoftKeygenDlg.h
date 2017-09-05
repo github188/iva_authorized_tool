@@ -1,5 +1,5 @@
 
-// JayaSoftKeygenDlg.h : 头文件
+// SoftKeygenDlg.h : 头文件
 //
 
 #pragma once
@@ -7,12 +7,12 @@
 #include "atltime.h"
 
 
-// CJayaSoftKeygenDlg 对话框
-class CJayaSoftKeygenDlg : public CDialogEx
+// CSoftKeygenDlg 对话框
+class CSoftKeygenDlg : public CDialogEx
 {
 // 构造
 public:
-	CJayaSoftKeygenDlg(CWnd* pParent = NULL);	// 标准构造函数
+	CSoftKeygenDlg(CWnd* pParent = NULL);	// 标准构造函数
 
 // 对话框数据
 	enum { IDD = IDD_JAYASOFTKEYGEN_DIALOG };
